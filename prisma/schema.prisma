@@ -91,3 +91,20 @@ model RequestHistory {
   @@index([apiId])
   @@map("request_history")
 }
+
+// API Keys model - stores encrypted API keys for different services
+model ApiKey {
+  id          String    @id @default(uuid())
+  name        String    @map("name") @db.VarChar(100)
+  service     String    @map("service") @db.VarChar(100) // e.g., "openai", "anthropic", "github"
+  key         String    @map("key") @db.Text // encrypted API key
+  environment String?   @map("environment") @db.VarChar(50) // "production", "development", "staging"
+  expiresAt   DateTime? @map("expires_at")
+  lastUsedAt  DateTime? @map("last_used_at")
+  createdAt   DateTime  @default(now()) @map("created_at")
+  updatedAt   DateTime  @updatedAt @map("updated_at")
+
+  @@index([service])
+  @@index([name])
+  @@map("api_keys")
+}
