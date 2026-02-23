@@ -1,5 +1,12 @@
 # developer-portal
 
+Production-grade project scaffold focused on reliability, maintainability, and fast onboarding.
+
+[![CI](https://img.shields.io/github/actions/workflow/status/yksanjo/developer-portal/ci.yml?branch=main&label=ci)](https://github.com/yksanjo/developer-portal/actions)
+![License](https://img.shields.io/github/license/yksanjo/developer-portal)
+![Last Commit](https://img.shields.io/github/last-commit/yksanjo/developer-portal)
+![Repo Size](https://img.shields.io/github/repo-size/yksanjo/developer-portal)
+
 ## Detailed Description
 
 developer-portal is maintained as an industry-grade software project with production-ready engineering practices.  
